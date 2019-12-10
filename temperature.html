@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><script>
+    function Temperature(C) {
+        this.C = C;
+        this.F = function () {
+            return (this.C*1.8 + 32);
+        }
+        this.K = function () {
+            return (this.C + 273.15);
+        }
+    };
+    let tem= new Temperature(25);
+    let dof=tem.F();
+    let dok=tem.K();
+    document.write('độ F la:'+tem.F(),'độ K là:'+tem.K());
+</script>
+
+</body>
+</html>

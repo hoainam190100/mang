@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="130px" height="78px" style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+        function rectangle(height, width) {
+            this.height = height;
+            this.width = width;
+            this.chuvi = function () {
+                return this.height*2 + this.width* 2;
+            }
+            this.dientich = function () {
+                return this.height * this.width;
+            }
+            this.Draw=function(x, y){
+                var ctx = document.getElementById("canvas").getContext("2d");
+                ctx.fillStyle = "#FF0000";
+                ctx.fillRect(x, y, this.height, this.width);
+            }
+        };
+        let A = new rectangle(50, 50);
+        A.hight = prompt('nhạp chieu cao');
+        A.width = prompt('nhap chieu rong');
+        A.Draw(20,20);
+        document.write('chu vi là :' + A.chuvi(), 'diện tích là :'+A.dientich());
+    </script>
+
+</body>
+</html>
